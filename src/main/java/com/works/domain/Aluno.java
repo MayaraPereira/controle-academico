@@ -9,5 +9,7 @@ public class Aluno {
         private int id;
         private String nome;
         private String curso;
+        private String usuario;
+        private String senha;
 }
 

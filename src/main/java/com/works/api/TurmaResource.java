@@ -3,6 +3,7 @@ package com.works.api;
 
 import com.works.domain.Turma;
 import com.works.domain.repository.TurmaRepository;
+import com.works.filters.Authorize;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
@@ -16,6 +17,7 @@ public class TurmaResource {
 
 
 	// requisições
+	@Authorize
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getTurmas() {
