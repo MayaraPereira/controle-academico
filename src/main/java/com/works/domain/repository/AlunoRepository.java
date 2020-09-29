@@ -3,11 +3,12 @@ package com.works.domain.repository;
 import com.works.domain.Aluno;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 public class AlunoRepository {
 	// banco de dados
-	 protected static HashMap<Integer, Aluno> alunos = new HashMap<>();
+	 protected static HashMap<Integer, Aluno> alunos = new HashMap();
 
 	public static HashMap<Integer, Aluno> getAlunos() {
 		return alunos;
@@ -22,8 +23,21 @@ public class AlunoRepository {
 	 	return new ArrayList<Aluno>(getAlunos().values());
 	}
 
-	public Aluno getById(int id) {
+	public static Aluno getById(int id) {
 		return getAlunos().get(id);
+	}
+
+	public static Aluno getByUsuario(String usuario) {
+		Iterator<Aluno> it = alunos.values().iterator();
+
+		while(it.hasNext()){
+			Aluno al = it.next();
+			if (al.getUsuario().equals(usuario)){
+				return al;
+			}
+
+		}
+		return null;
 	}
 
 	public void create(Aluno aluno){
