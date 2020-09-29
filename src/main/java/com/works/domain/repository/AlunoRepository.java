@@ -8,7 +8,7 @@ import java.util.List;
 
 public class AlunoRepository {
 	// banco de dados
-	 protected static HashMap<Integer, Aluno> alunos = new HashMap<>();
+	 protected static HashMap<Integer, Aluno> alunos = new HashMap();
 
 	public static HashMap<Integer, Aluno> getAlunos() {
 		return alunos;

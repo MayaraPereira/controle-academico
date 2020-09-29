@@ -8,7 +8,7 @@ import java.util.List;
 
 public class TurmaRepository {
 	// banco de dados
-	 protected static HashMap<Integer, Turma> turmas = new HashMap<>();
+	 protected static HashMap<Integer, Turma> turmas = new HashMap();
 
 	public static HashMap<Integer, Turma> getTurmas() {
 		return turmas;
