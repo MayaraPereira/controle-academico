@@ -49,7 +49,7 @@ public class AlunoResource {
 				if(aluno.getSenha().equals(AlunoRepository.getByUsuario(aluno.getUsuario()).getSenha()) ){
 					String jwtToken = Jwts.builder()
 							.setSubject(aluno.getUsuario())
-							.setIssuer("localhost:8080")
+							.setIssuer("https://teste-heroku-controle.herokuapp.com")
 							.setIssuedAt(new Date())
 							.setExpiration(
 									Date.from(

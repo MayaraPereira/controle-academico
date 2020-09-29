@@ -39,7 +39,7 @@ public class LoginResource {
             {
                 String jwtToken = Jwts.builder()
                         .setSubject(aluno.getNome())
-                        .setIssuer("localhost:8080")
+                        .setIssuer("https://teste-heroku-controle.herokuapp.com")
                         .setIssuedAt(new Date())
                         .setExpiration(
                                 Date.from(
