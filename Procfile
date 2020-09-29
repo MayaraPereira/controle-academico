@@ -1,1 +1,1 @@
-web: mvn clean test exec:java
+web: java $JAVA_OPTS -jar target/works-1.0-SNAPSHOT.jar --port $PORT target/*.war
