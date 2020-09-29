@@ -1,1 +1,1 @@
-web: java -jar target/works-1.0-SNAPSHOT.jar
+web: mvn clean test exec:java
